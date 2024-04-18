@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/4cdbf6a8dd.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!---------header start----------->
+    <div id="header">
+      <div class="container">
+        <!----------topnav start------------->
+        <nav>
+          <h3 class="logo"><span>Tej</span>ashwini</h3>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <!----------topnav end------------->
+        <div class="header-text">
+          <h3>Hello I'm</h3>
+          <h1>Tejashwini ponna</h1>
+        </div>
+      </div>
+    </div>
+    <!--------------------------------header end---------------------------->
+    <!------------------------------about start---------------------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <!---------left side------>
+          <div class="about-image">
+            <img src="images/user.jpeg" />
+          </div>
+          <!---------left side------>
+          <!---------right side------>
+          <div class="about-text">
+            <h1 class="title">About Me</h1><br>
+            <h2>PONNA TEJASHWINI</h2><br>
+            <p1>Graduated from G.pulla reddy degree and pg college in the year 2022. Iam a skilled front end developer  in creating user-friendly, responsive websites.
+              " Iam responsible for implementing visual elements that users see and interact with in a web application.
+                I'm passionate about creating great user experiences and have a strong understanding of usability and accessibility standards.
+                And I have a Strong problem solving and debugging skills.
+            </p1>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <!-----------<p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>---------->
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>HTLM</span><br />layouts of a websitebased on templates
+                  and wireframes.
+                </li>
+              </ul>
+              <br />
+              <ul>
+                <li>
+                  <span>CSS</span><br />Styling of a document written in a
+                  markup language such as HTML or XML
+                </li>
+              </ul>
+              <br />
+              <ul>
+                <li>
+                  <span>JAVASCRIPT</span><br />It allows you to make web pages
+                  interactive
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">Fresher</div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>GRADUATION</span><br />G.Pulla Reddy degree and P.G
+                  college <br />passed out-2022
+                </li>
+              </ul>
+              <br />
+              <ul>
+                <li>
+                  <span>INTERMEDIATE</span><br />Sri Chaitanya junior college
+                  <br />passed out-2019
+                </li>
+              </ul>
+              <br />
+              <ul>
+                <li>
+                  <span>PRIMARY EDUCATION</span><br />S.R high school
+                  <br />passed out-2017
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!---------right side------>
+        </div>
+      </div>
+    </div>
+    <!-------about end-------->
+    <!--------------------sevices----------------------->
+    <div id="services">
+      <div class="container">
+        <h1 class="title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Responsive Web design</h2>
+                <p></p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store-ios"></i>
+                <h2>app design</h2>
+                <p></p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-mobile-screen"></i>
+                <h2>web applications</h2>
+                <p></p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--------------contact------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> ponnatejashwini@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 6281794994</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/RESUME.docx.pdf" class="btn">Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  cols="30" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright 2024 @PonnaTejashwini. All rights reserved</p>
+        </div>
+    </div>
+
+
+
+
+<!------------------------javascript start--------------------->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu(){
+        sidemenu.style.right = "0";
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzzmhEjsQAfmT_YHGvycPQGAly0Hygc_V022mCYOjGK_9yPnCYhFsAmhEJbs0z2o-Bw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+    <!------------------------javascript start--------------------->
+  </body>
+</html>
